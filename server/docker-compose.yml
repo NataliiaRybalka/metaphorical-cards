@@ -1,0 +1,34 @@
+version: '3'
+
+networks:
+  backend:
+
+services:
+  server:
+    depends_on:
+      - db
+    networks:
+      - backend
+    volumes:
+      - storage:/storage
+
+  db:
+    image: mongo:4
+    volumes:
+      - mongo:/data/mongo
+    networks:
+      - backend
+
+volumes:
+  storage:
+    driver: local
+    driver_opts:
+      device: $PWD/storage
+      o: bind
+      type: none
+  mongo:
+    driver: local
+    driver_opts:
+      device: $PWD/.data/mongo
+      o: bind
+      type: none
