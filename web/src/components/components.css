@@ -59,10 +59,14 @@ table, tr {
   margin: 0 auto;
   width: 70%;
 }
+.adminPanel {
+  width: 100vw;
+}
 .adminPanelDiv {
   text-align: right;
   margin: 0 auto;
   width: 75%;
+
 }
 
 select {

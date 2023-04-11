@@ -68,7 +68,7 @@ export const AdminPanel = () => {
   };
 
   return (
-    <div>
+    <div className='adminPanel'>
       <h1>Админ Панель</h1>
 
       <div className='adminPanelDiv'>
@@ -76,8 +76,8 @@ export const AdminPanel = () => {
           <option value={FULCRUM}>Точка Опоры</option>
           <option value={INTERNAL_COMPASS}>Внутренний Компас</option>
         </select>
-        {/* <br /> */}
-        {/* <button className='addRowBtn' onClick={handleAddRow}>Add a row</button> */}
+        {/* <br /> 
+        <button className='addRowBtn' onClick={handleAddRow}>Add a row</button> */}
 
         <table className='adminTable'>
           <thead>
