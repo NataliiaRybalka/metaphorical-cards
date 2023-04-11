@@ -9,6 +9,8 @@ body {
   background-color: #A8AAD3;
   font-size: 20px;
   color: white;
+  position: absolute;
+  min-height: 100vh;
 }
 
 code {
