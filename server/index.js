@@ -6,6 +6,7 @@ import path from 'path';
 import * as url from 'url';
 
 import { getCard, postCard } from './controller/card.controller.js';
+import { getUser } from './controller/user.controller.js';
 
 const PORT = process.env.PORT | 4000;
 const __dirname = url.fileURLToPath(new URL('.', import.meta.url));
@@ -35,6 +36,8 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+
+app.get('/admin', getUser);
 
 app.get('/cards/:deck', getCard);
 app.post('/cards', uploadImage.array('file', 100), postCard);

@@ -1,13 +1,13 @@
 import { Route } from 'react-router-dom';
 
-import { AdminPanel } from './components/AdminPanel';
+import { Admin } from './components/Admin';
 import { Tabs } from './components/Tabs';
 
 function App() {
 
   return (
     <div className='App'>
-      <Route path='/admin' component={ AdminPanel } />
+      <Route path='/admin' component={ Admin } />
       <Route path='/' component={ Tabs } exact />
 
       <footer>

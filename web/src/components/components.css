@@ -53,6 +53,28 @@ button {
 }
 
 /* admin page */
+.adminLogin {
+  width: 100vw;
+}
+.adminLogin > div {
+  display: flex;
+  flex-direction: column;
+  width: 20%;
+  margin: auto;
+}
+.adminLogin > div > button {
+  margin: 10px auto;
+  width: 100px;
+  height: 30px;
+  font-size: 18px;
+  background-color: #a2a6e6;
+  margin-bottom: 30px;
+}
+.adminLogin > div > p {
+  color: #ff0000;
+  margin: auto;
+}
+
 table, tr {
   border: 1px solid black;
   border-collapse: collapse;
