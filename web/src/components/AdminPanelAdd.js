@@ -5,7 +5,7 @@ import { FULCRUM, INTERNAL_COMPASS, SERVER } from '../constants';
 
 import './components.css';
 
-export const AdminPanel = () => {
+export const AdminPanelAdd = () => {
   const [deck, setDeck] = useState(FULCRUM);
   const [inputValues, setInputValues] = useState({
     file: '',

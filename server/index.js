@@ -5,7 +5,7 @@ import multer from 'multer';
 import path from 'path';
 import * as url from 'url';
 
-import { getCard, postCard } from './controller/card.controller.js';
+import { getCards, getCard, postCard } from './controller/card.controller.js';
 import { getUser } from './controller/user.controller.js';
 
 const PORT = process.env.PORT | 4000;
@@ -39,6 +39,7 @@ app.use(express.urlencoded({ extended: true }));
 
 app.get('/admin', getUser);
 
+app.get('/cards', getCards);
 app.get('/cards/:deck', getCard);
 app.post('/cards', uploadImage.array('file', 100), postCard);
 app.get('/:filename', (req, res) => {

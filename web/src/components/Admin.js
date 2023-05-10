@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 
-import { AdminPanel } from './AdminPanel';
 import { AdminLogin } from './AdminLogin';
+import { AdminTabs } from './AdminTabs';
 
 import './components.css';
 
@@ -16,7 +16,7 @@ export const Admin = () => {
     <>
       {!savedUser 
         ? <AdminLogin />
-        : <AdminPanel />
+        : <AdminTabs />
       }
     </>
   )
