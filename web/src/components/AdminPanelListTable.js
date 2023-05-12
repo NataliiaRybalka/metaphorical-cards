@@ -1,4 +1,4 @@
-import { FULCRUM, INTERNAL_COMPASS } from '../constants';
+import { FULCRUM } from '../constants';
 
 import './components.css';
 
