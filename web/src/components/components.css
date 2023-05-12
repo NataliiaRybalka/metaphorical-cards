@@ -53,6 +53,10 @@ button {
 }
 
 /* admin page */
+/* .adminPanel {
+  width: 100vw;
+} */
+
 .adminLogin {
   width: 100vw;
 }
@@ -75,20 +79,23 @@ button {
   margin: auto;
 }
 
+.adminPanelDiv {
+  text-align: right;
+}
 table, tr {
   border: 1px solid black;
   border-collapse: collapse;
   margin: 0 auto;
-  width: 70%;
+  width: 100%;
 }
-.adminPanel {
-  width: 100vw;
+thead > tr {
+  text-align: center;
 }
-.adminPanelDiv {
-  text-align: right;
-  margin: 0 auto;
-  width: 75%;
-
+tr {
+  border-bottom: 1pt solid black;
+}
+td {
+  width: 50%;
 }
 
 select {
@@ -107,23 +114,6 @@ select {
 }
 .adminPanelDiv > table {
   margin-bottom: 30px;
-}
-
-table, tr {
-  text-align: left;
-  border: 1px solid black;
-  border-collapse: collapse;
-  margin: 0 auto;
-  width: 100%;
-}
-thead > tr {
-  text-align: center;
-}
-tr {
-  border-bottom: 1pt solid black;
-}
-td {
-  width: 50%;
 }
 
 textarea {

@@ -11,6 +11,7 @@ body {
   color: white;
   position: absolute;
   min-height: 100vh;
+  min-width: 100vw;
 }
 
 code {

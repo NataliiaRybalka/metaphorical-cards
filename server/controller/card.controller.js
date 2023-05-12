@@ -4,23 +4,19 @@ import { FULCRUM, INTERNAL_COMPASS, SERVER } from '../constants.js';
 
 export const getCards = async (req, res) => {
   try {
-    const cards = [
-      {fulcrum: []},
-      {internalCompass: []},
-    ];
+    const fulcrum = await FulcrumSchema.find();
+    const internalCompass = await InternalCompassSchema.find();
 
-    cards.fulcrum = await FulcrumSchema.find();
-    cards.internalCompass = await InternalCompassSchema.find();
+    fulcrum.map(card => {
+      card.image = `${SERVER}${card.image}`;
+      return card;
+    });
+    internalCompass.map(card => {
+      card.image = `${SERVER}${card.image}`;
+      return card;
+    });
 
-    cards.forEach(table => {
-      console.log(table);
-      // table.map(card => {
-      //   card.image = `${SERVER}${card.image}`;
-      //   return card;
-      // })
-    })
-
-    res.status(200).json(cards);
+    res.status(200).json({fulcrum, internalCompass});
   } catch (e) {
     res.status(400).json(e.message);
   }

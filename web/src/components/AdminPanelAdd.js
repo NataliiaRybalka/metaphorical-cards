@@ -79,11 +79,15 @@ export const AdminPanelAdd = () => {
         {/* <br /> 
         <button className='addRowBtn' onClick={handleAddRow}>Add a row</button> */}
 
-        <table className='adminTable'>
+        <table className='adminTableAdd'>
           <thead>
             <tr>
-              <td>Изображение</td>
-              <td>Описание</td>
+              <td>
+                <span>Изображение</span>
+              </td>
+              <td>
+                <span>Описание</span>
+              </td>
             </tr>
           </thead>
           <tbody>
